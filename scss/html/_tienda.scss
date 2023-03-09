@@ -1,0 +1,87 @@
+@import "../utilidades/mixin";
+
+/* Estilos Mobile Tienda */
+main {
+
+    .productos {
+        display: grid;
+        grid-template-columns: 80%;
+        grid-template-rows: auto;
+        justify-items: center;
+        justify-content: center;
+        row-gap: 1rem;
+        margin-bottom: 2rem;
+
+        .item-tienda {
+            @include flex-columna-centro;
+            gap: 0.5rem;
+            border: solid rgba(128, 128, 128, 0.473) 1px;
+            border-radius: 10px;
+
+            .carousel-inner {
+                border-radius: 10px;
+
+                .carousel-item {
+                    transition: 0.8s;
+                }
+            }
+
+            .carousel-control-prev {
+                filter: invert(100%);
+            }
+            
+            .carousel-control-next {
+                filter: invert(100%);
+            }
+
+            h2 {
+                font-weight: 500;
+                font-size: large;
+            }
+        }
+
+    }
+
+}
+
+/* Estilos Tablet Tienda: */
+@media screen and (min-width:600px) {
+    main {
+        .productos {
+            grid-template-columns: 40% 40%;
+            justify-content: center;
+            column-gap: 1rem;
+
+            .item-tienda {
+                .carousel-inner {
+                    .carousel-item {
+                        img {
+                            width: 80%;
+                            transition: 0.3s;
+                        }
+        
+                        img:hover {
+                            transform: scale(1.05);
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Estilos Desktop Tienda: */
+@media screen and (min-width:1024px) {
+    main {
+        .productos {
+            grid-template-columns: 27% 27% 27%;
+
+            .item-tienda {
+                img {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

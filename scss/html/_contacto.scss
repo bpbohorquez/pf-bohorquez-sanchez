@@ -1,0 +1,46 @@
+@import "../utilidades/mixin";
+
+/* Estilos Contacto */
+.main-contacto {
+    @include flex-columna-centro;
+
+    .formulario {
+        @include flex-columna-centro;
+        width: 90%;
+        font-weight: 500;
+        
+        fieldset {
+            .formulario-input {
+                margin: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.3rem;
+
+                input {
+                    text-align: center;
+                }
+
+            }
+
+            .formulario-boton {
+                margin: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.3rem;
+
+                input {
+                    padding: 0.1rem;
+                }
+
+            }
+        }
+    }
+}
+
+.footer-contacto {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
